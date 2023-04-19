@@ -15,21 +15,17 @@ const FormField = ({ind, data, setData, onDelete }) => {
 
   const handleNameChange = (e) => {
     setName(e.target.value)
-    setData({ name, type, fields });
   };
   const handleTypeChange = (e) => {
     setType(e.target.value)
-    setData({ name, type, fields });
   };
 
   const handleNestedFieldAdd = (index) => {
     setFields([...fields, { name: "", type: FieldTypes.String }]);
-    setData({ name, type, fields });
   };
 
   const handleNestedFieldDelete = (parentIndex, index) => {
     setFields(fields.filter((element,ind)=>index !== ind))
-    setData({ name, type, fields });
   };
 
   const handleSave = () => {
